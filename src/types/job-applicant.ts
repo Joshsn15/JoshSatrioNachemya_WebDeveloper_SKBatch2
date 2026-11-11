@@ -1,0 +1,5 @@
+export const jobs = [
+    { id: 1, name: "Software Engineer" , status: "open" , requirements: ["Proficiency in programming languages such as React, Node.js, or Python.", "Experience with software development methodologies and tools.", "Strong problem-solving and analytical skills.", "Ability to work collaboratively in a team environment."] },
+    { id: 2, name: "UX Designer" , status: "open" , requirements: ["Experience with user research and usability testing.", "Proficiency in design tools such as Figma, Sketch, or Adobe Creative Suite.", "Strong understanding of user-centered design principles.", "Ability to create wireframes, prototypes, and visual designs."] },
+    { id: 3, name: "KOL Manager" , status: "open" , requirements: ["Experience in managing relationships with key opinion leaders.", "Strong communication and negotiation skills.", "Ability to develop and execute marketing strategies.", "Knowledge of social media platforms and digital marketing trends.", ] },
+]

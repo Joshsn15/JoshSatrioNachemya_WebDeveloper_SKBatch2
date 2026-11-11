@@ -1,26 +1,23 @@
+import { Box, Container, Toolbar } from "@mui/material"
 import NavigationBar from "./components/NavigationBar"
 import RecruitmentSection from "./components/RecruitmentSection"
 function App() {
 
   return (
     <>
-      <div className="Landing-Page-Wrapper">
-        <div className="Content">
-          <div className="Header">
-            <NavigationBar />
-          </div>
-          <div className="Body"></div>
-          
-          <div className="body">
-            <RecruitmentSection />
-          </div>
-          <div className="Next-Steps" id="next-steps">
-            <div id="docs">
-              <h2>Docs</h2>
-            </div>
-          </div>
+      <Container sx={{
+        maxWidth: "100%",
+        minHeight: "100dvh",
+      }}>
+        <Box>
+          <NavigationBar />
+          <Toolbar sx={{ minHeight: { xs: 64, md: 80 } }} />
+        </Box>
+        <div className="body">
+          <RecruitmentSection />
+
         </div>
-      </div>
+      </Container>
     </>
   )
 }

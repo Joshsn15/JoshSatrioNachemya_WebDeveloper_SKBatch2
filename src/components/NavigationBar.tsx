@@ -10,18 +10,28 @@ import {
     ListItemButton,
     ListItemText,
     Typography,
+    useScrollTrigger,
 } from "@mui/material";
 import { links } from "../types/NavigationBar";
-import  logo from "../assets/logo.png"
+import logo from "../assets/logo.png"
 function NavigationBar() {
     const [open, setOpen] = useState(false);
-
+    const trigger = useScrollTrigger({
+        disableHysteresis: true,
+        threshold: 20,
+    });
     return (
         <>
             <AppBar
-                position="sticky"
-                elevation={-1}
-                sx={{ bgcolor: "transparent" }}
+                position="fixed"
+                elevation={1}
+                sx={{
+                    bgcolor: trigger ? "rgba(21, 144, 230, 0.85)" : "transparent",
+                    backdropFilter: trigger ? "blur(8px)" : "none",
+                    boxShadow: trigger ? "0 2px 12px rgba(0,0,0,0.15)" : "none",
+                    transition: "background-color 0.3s ease, box-shadow 0.3s ease",
+
+                }}
             >
                 <Toolbar sx={{
                     px: {
@@ -44,7 +54,7 @@ function NavigationBar() {
                                     md: 70,
                                     lg: 76,
                                 },
-                                width : "auto",
+                                width: "auto",
                                 display: "block"
                             }}
                         />
@@ -52,14 +62,17 @@ function NavigationBar() {
 
                     <Box sx={{
                         display: {
-                            xs: "none",
+                            xs: "flex",
                             md: "flex"
                         },
                         alignItems: "center",
-                        gap: 1
+                        gap: {
+                            xs: 0,
+                            md: 1
+                        }
                     }}>
                         {links.map((l) => (
-                            <Button 
+                            <Button
                                 key={l.label}
                                 href={l.href}
                                 sx={{
@@ -68,11 +81,12 @@ function NavigationBar() {
                                     borderRadius: 2,
                                     px: {
                                         xs: 1,
-                                        md: 2 },
+                                        md: 2
+                                    },
                                     "&:hover": { bgcolor: "#f0f0f0", color: "#CC310E" },
                                 }}
                             >
-                                <Typography sx={{fontFamily: "ID-Grotesk, sans-serif", fontWeight: 700}}>{l.label}</Typography>
+                                <Typography sx={{ fontFamily: "ID-Grotesk, sans-serif", fontWeight: 700 }}>{l.label}</Typography>
                             </Button>
                         ))}
                     </Box>
@@ -103,7 +117,7 @@ function NavigationBar() {
                                 "&:hover": { bgcolor: "#f0f0f0", boxShadow: "none", color: "#CC310E" },
                             }}
                         >
-                            <Typography sx={{fontFamily: "ID-Grotesk, sans-serif", fontWeight: 700}}>JOIN US!</Typography>
+                            <Typography sx={{ fontFamily: "ID-Grotesk, sans-serif", fontWeight: 700 }}>JOIN US!</Typography>
                         </Button>
                         <IconButton
                             color="inherit"
@@ -116,7 +130,8 @@ function NavigationBar() {
                 </Toolbar>
             </AppBar>
 
-            {/* Menu mobile */}
+
+                            
             <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
                 <Box sx={{ width: 240, pt: 2 }} role="presentation">
                     <List>
