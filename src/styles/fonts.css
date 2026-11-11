@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Extenda';
+    src: url('../assets/font/Extenda-40-Hecto-trial.eot');
+    src: url('../assets/font/Extenda-40-Hecto-trial.eot?#iefix') format('embedded-opentype'),
+         url('../assets/font/Extenda-40-Hecto-trial.woff') format('woff'),
+         url('../assets/font/Extenda-40-Hecto-trial.ttf') format('truetype'),
+         url('../assets/font/Extenda-40-Hecto-trial.svg#Extenda 40 Hecto') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ID-Grotesk';
+    src: url('../assets/font/IDGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

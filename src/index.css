@@ -1,0 +1,7 @@
+:root {
+  --background: linear-gradient(180deg, #0099ff 0%, #fdfdfe 100%);
+  background: var(--background);
+
+  min-height: 100dvh;
+}
+

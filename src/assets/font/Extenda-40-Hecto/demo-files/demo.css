@@ -1,0 +1,22 @@
+body{margin:0;padding:0;font-family:Verdana,Arial,sans-serif;font-size:12px}
+#wrapper{width:1000px;margin-right:auto;margin-left:auto;border:1px solid #eee;border-top:0}
+#title{float:left;width:680px;margin:20px 0 20px 20px;font-size:60px;white-space:nowrap;overflow:hidden}
+#logo{float:right;margin:25px 20px 20px 0}
+#logo img{border:0}
+#menu,#footer{background:#eee}
+#menu ul{padding:0;margin:0}
+#menu li{list-style-type:none}
+#menu li a{padding:5px 20px;float:left;color:#000;text-decoration:none;font-weight:bold}
+#menu li a:hover{background:#d7d7d7}
+#menu li.selected a{background:#002957;color:#fff}
+#content{padding:20px}
+#glyphs{float:left;margin-bottom:-20px!important}
+#glyphs .g{width:89px;min-height:100px;float:left;margin-bottom:20px;padding:0 3px;text-align:center;border-right:1px solid #eee;white-space:nowrap;overflow:hidden}
+#glyphs .noborder{border:0}
+#glyphs p{padding:0;margin:10px 0 0;font-size:60px}
+#footer{padding:5px 20px}
+#footer a{color:#000}
+#copyright{float:left;width:730px;white-space:nowrap;overflow:hidden}
+#generated{float:right}
+#support{width:960px;margin-right:auto;margin-left:auto;padding:5px 20px 20px;color:#777}
+.clr{clear:both}
