@@ -24,12 +24,12 @@ Buka `http://localhost:5173`.
 
 ```
 src/
-├── components/     # NavigationBar, RecruitmentSection
-├── pages/          # RecruitmentPage (form lamaran)
+├── components/     # NavigationBar
+├── pages/          # RecruitmentPage (form lamaran) & Main Pages
 ├── styles/         # fonts.css
-├── types/          # data posisi (jobs) dan class Applicant
+├── types/          # data posisi, class Applicant dan data Navigation
 ├── App.tsx
-└── main.tsx        # definisi route
+└── main.tsx        
 ```
 
 ## Route
@@ -44,7 +44,7 @@ src/
 - **Frontend-only.** Scope tugas hanya landing page, jadi tidak ada backend. Data posisi disimpan statis di Array `applicants` pada Recruitment Page.
 - **Material UI.** Komponen seperti `Grid`, `Card`, `TextField`, `Button` yang membantu pembuatan layout.
 - **Responsif dengan `sx` breakpoint.** Ukuran font, padding, dan jumlah kolom diatur per breakpoint (`xs`, `sm`, `md`). Role cards tampil 1 kolom di mobile dan 3 kolom di desktop.
-- **Navbar.** Navbar mengikuti saat scroll. Di mobile, menu Navbar menggunakan `Drawer`.
+- **Navbar.** Data navbar menggunakan map dari `NavigationBar.ts` sehingga dapat bertambah. Navbar mengikuti saat scroll. Di mobile, menu Navbar menggunakan `Drawer`.
 - **Route parameter untuk role.** Tombol "Apply Now" mengarah ke `/recruitment-section`.
 - **Validasi form .** Hanya cek field kosong dan format email mengandung `@`.
 
