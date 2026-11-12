@@ -26,7 +26,7 @@ export function RecruitmentPage() {
         };
         setErrors(newErrors);
 
-        if (Object.values(newErrors).every((msg) => msg !== "")) {
+        if (Object.values(newErrors).some((msg) => msg !== "")) {
             return
         }
         else {
