@@ -49,4 +49,6 @@ src/
 - **Validasi form .** Hanya cek field kosong dan format email mengandung `@`.
 
 
-
+## Penggunaan AI
+ Saya menggunakan `Claude Sonnet 5.5` yang membantu saya untuk hal hal seperti penjelasan pada component dan cara menggunakannya.
+Tools AI ini membantu saya dalam mempertimbangkan penggunaan syntax pada assignment ini
