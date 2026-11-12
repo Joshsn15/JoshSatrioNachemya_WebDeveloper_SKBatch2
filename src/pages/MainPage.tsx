@@ -2,8 +2,10 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 
 import "../styles/fonts.css";
 import { jobs } from "../types/job-applicant";
+import { useNavigate } from "react-router";
 
-function RecruitmentSection() {
+function MainPage() {
+  const navigate = useNavigate();
   return (
     <section className="recruitment-section">
       <Box
@@ -124,6 +126,7 @@ function RecruitmentSection() {
                           boxShadow: "none",
                         },
                       }}
+                      onClick={() => navigate(`/recruitment-section`)}
                     >
                       Apply Now
                     </Button>
@@ -138,4 +141,4 @@ function RecruitmentSection() {
   );
 }
 
-export default RecruitmentSection;
+export default MainPage;
